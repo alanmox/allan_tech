@@ -1,0 +1,150 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f0ff, #c6ddff);
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*header 2 up*/
+h2{
+    font-size: 3rem;
+    white-space: nowrap;
+    animation: moveRight 15s linear infinite, shine 7s infinite;
+    background: linear-gradient(
+        90deg,
+        gold,
+        rgb(65, 51, 141),
+        lab(82.24% 7.8 83.87),
+        rgb(245, 135, 203),
+        rgb(157, 197, 219),
+        lab(82.24% 7.8 83.87),
+        grey,
+        green,
+        lab(82.24% 7.8 83.87)
+    );
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Move text from left to right */
+@keyframes moveRight {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Shiny gold-white wave */
+@keyframes shine {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Card-style container */
+.content1 {
+    background-color: rgb(247, 244, 92);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* Headings */
+.content1 h3 {
+    font-size: 1.8rem;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+/* Logo image – circular shape */
+.content1 img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 3px solid #0077cc; /* Optional: adds a blue border */
+}
+
+
+/* Buttons */
+.content1 button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.content1 button:hover {
+    background-color: #005fa3;
+    transform: scale(1.02);
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer a {
+    color: #66ccff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .content1 {
+        padding: 30px 20px;
+    }
+
+    .content1 h3 {
+        font-size: 1.5rem;
+    }
+
+    .content1 img {
+        width: 100px;
+    }
+
+    .content1 button {
+        font-size: 15px;
+    }
+}
